@@ -5,6 +5,13 @@ namespace Fibonacci
         public Form1()
         {
             InitializeComponent();
+            for (int i = 1; i < 10; i++)
+            {
+                Button b = new Button();
+                b.Top = i * 30;
+                b.Text = Fibonacci(i).ToString();
+                Controls.Add(b);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
