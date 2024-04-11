@@ -37,7 +37,6 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).BeginInit();
             SuspendLayout();
@@ -106,22 +105,11 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // button4
-            // 
-            button4.Location = new Point(521, 417);
-            button4.Name = "button4";
-            button4.Size = new Size(133, 29);
-            button4.TabIndex = 4;
-            button4.Text = "mentés";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -144,6 +132,5 @@
         private BindingSource countryDataBindingSource;
         private Button button2;
         private Button button3;
-        private Button button4;
     }
 }

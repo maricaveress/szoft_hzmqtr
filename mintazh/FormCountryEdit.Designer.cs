@@ -33,9 +33,10 @@
             label2 = new Label();
             label3 = new Label();
             textBox1 = new TextBox();
+            bindingSource1 = new BindingSource(components);
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            bindingSource1 = new BindingSource(components);
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
@@ -75,6 +76,10 @@
             textBox1.Size = new Size(118, 23);
             textBox1.TabIndex = 3;
             // 
+            // bindingSource1
+            // 
+            bindingSource1.DataSource = typeof(CountryData);
+            // 
             // textBox2
             // 
             textBox2.DataBindings.Add(new Binding("Text", bindingSource1, "Population", true));
@@ -91,15 +96,22 @@
             textBox3.Size = new Size(118, 23);
             textBox3.TabIndex = 5;
             // 
-            // bindingSource1
+            // button1
             // 
-            bindingSource1.DataSource = typeof(CountryData);
+            button1.Location = new Point(34, 207);
+            button1.Name = "button1";
+            button1.Size = new Size(120, 40);
+            button1.TabIndex = 6;
+            button1.Text = "mentés";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // FormCountryEdit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -122,5 +134,6 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private BindingSource bindingSource1;
+        private Button button1;
     }
 }

@@ -46,14 +46,6 @@ namespace mintazh
             fce.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            using (var writer = new StreamWriter("countries.csv"))
-            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
-            {
-                // Write records to the CSV file
-                csv.WriteRecords(countryList);
-            };
-        }
+        
     }
 }
